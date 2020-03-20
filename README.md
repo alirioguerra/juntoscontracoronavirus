@@ -1,2 +1,1 @@
-# cofen-coronavirus
- 
+# HTML Template
