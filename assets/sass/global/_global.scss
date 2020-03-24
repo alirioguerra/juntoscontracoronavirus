@@ -1,0 +1,73 @@
+body {
+  @include type-1();
+  font-size: 16px;
+  color: $color-2;
+}
+
+.btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  max-width: 900px;
+  width: 100%;
+
+  @include type-1(700);
+
+  border: none;
+  img {
+    width: 23px;
+  }
+  &-primary {
+    background-color: $color-3;
+    transition: all 0.35s ease;
+    &:hover {
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+      background-color: transparentize($color-3, 0.1);
+    }
+    @include bp('cel') {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+  }
+  &-secondary {
+    background-color: $color-2;
+    transition: all 0.35s ease;
+    &:hover {
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+      background-color: transparentize($color-2, 0.1);
+    }
+    @include bp('cel') {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+.modal-content {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  @include bp(tab) {
+    max-width: 100%;
+  }
+  iframe {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}

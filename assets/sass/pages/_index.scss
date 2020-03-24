@@ -1,374 +1,225 @@
-// youtube video section
-
-#youtube-video {
-  &-text-content {
-    max-width: 80%;
-    float: right;
-
-    @include bp(tab) {
-      float: none;
-    }
-    #title-primary {
-      @include typePrimary(700, 60);
-      text-transform: uppercase;
-      margin: 0 0 20px 0;
-      color: $color-1;
-      @include bp(tab) {
-        font-size: 2.4em;
-      }
-    }
-    p {
-      color: #6c7e34;
-      max-width: 478px;
-      letter-spacing: 1px;
-      span {
-        color: $color-1;
-        display: block;
-        padding: 30px 0 0;
-        font-weight: 700;
-      }
-    }
-  }
-  &-media-content {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 85%;
-    @include bp(tab) {
-      max-width: 100%;
-    }
-    @include radius();
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-    }
-  }
-}
-
-// tipos de lixo
-#tipos-de-lixo {
-  background-color: $color-1;
-}
-.owl-item > div {
-  cursor: pointer;
-  margin: 6% 6%;
-  transition: all 0.4s ease;
-
-  .list {
-    background: transparent;
-  }
-}
-.owl-item.center > div {
-  cursor: auto;
-  img {
-    width: 0;
-  }
-  .list {
-    max-width: 100%;
-    border: 1px solid #fff;
-    padding: 20px 0;
-    @include radius();
-
-    h2 {
-      font-size: 35px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #fff;
-      text-align: center;
-      padding: 0 0 20px 0;
-      border-bottom: 1px solid currentColor;
-    }
-    ul {
-      width: 90%;
-      height: 250px;
-      overflow-y: scroll;
-      margin: 20px auto;
-      @include bp(tab, 'max') {
-        max-height: 84%;
-      }
-
-      li {
-        color: #fff;
-        padding: 5px;
-        position: relative;
-        &:after {
-          content: '';
-          position: absolute;
-          display: block;
-          width: 4px;
-          height: 4px;
-          border-radius: 30px;
-          background-color: $color-2;
-          top: 0;
-          bottom: 0;
-          left: -20px;
-          margin: 12px;
-        }
-      }
-    }
-  }
-}
-.owl-item:not(.center) > div {
-  cursor: auto;
-  img {
-    width: 100%;
-  }
-  @include bp(tab) {
-    img {
-      display: none;
-    }
-  }
-  .list {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-}
-.owl-item:not(.center) > div:hover {
-  opacity: 0.35;
-}
-
-// coleta e reciclagem
-#coleta-e-reciclagem {
-  background-color: $color-3;
-}
-.beneficios {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  &-list {
-    max-width: 410px;
-    @include bp(tab, 'max') {
-      max-width: 2000px;
-    }
-    &-separar {
-      background: $color-4;
-      padding: 0;
-      flex: 0 0 1px;
-      @include bp(tab) {
-        display: none;
-      }
-    }
-    &-item {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 10px;
-      img {
-        margin-right: 10px;
-      }
-      p {
-        color: #fff;
-      }
-    }
-  }
-}
-
-// como separar
-#como-separar {
-  &-lixeiras {
+#links {
+  background-color: $color-2;
+  .special-link {
+    text-align: center;
+    @include type-1(400);
+    color: white;
+    border: 1px solid $color-1;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .lixeiras-wrapper {
+    margin: 15px;
+    padding: 5px;
+    @include bp(cel) {
+      flex-direction: column;
+    }
+    img {
       margin: 10px;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      #como-separar-lixeiras-organicos-open,
-      #como-separar-lixeiras-reciclaveis-open {
-        width: 0;
-        transition: all 0.35s ease;
-      }
-      &.active {
-        #como-separar-lixeiras-organicos-open,
-        #como-separar-lixeiras-reciclaveis-open {
-          width: 666px;
-          @include bp(tab) {
-            width: 396px;
-          }
-        }
-      }
-    }
-
-    h2 {
-      text-transform: uppercase;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 30px;
-      @include bp(cel) {
-        font-size: 0.6em;
-      }
-    }
-    &-reciclaveis {
-      color: #00b73e;
-    }
-
-    &-organicos {
-      color: #9e6856;
     }
   }
 }
 
-// dicas importantes
-.dicas-importantes {
-  align-items: center;
-}
-#agente {
-  position: absolute;
-  bottom: -21%;
-  z-index: -1;
-  max-height: 325px;
-  overflow: hidden;
-  @include bp(tab, 'max') {
-    position: relative;
-    margin: 0 auto;
-    max-width: 460px;
-  }
-}
-
-#dicas {
-  border: 2px solid #70883c;
-  padding: 20px 40px;
-  @include radius();
-  h3 {
-    text-transform: uppercase;
-    @include typePrimary(700);
-  }
-  li {
-    font-size: 90%;
-    line-height: 1.5;
-    padding: 5px 0;
-  }
-}
-
-// botoes
-#buttons {
-  background-color: $color-1;
-}
-
-// idade do lixo
-#idade-do-lixo-banner {
-  background-color: $color-5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 20px;
-  max-width: 880px;
+#text-content {
+  padding: 160px 0 70px;
+  text-align: center;
+  max-width: 725px;
   margin: 0 auto;
-  @include radius();
-  & > p.small {
-    position: absolute;
-    right: 0;
-    bottom: -60%;
+  @include bp('cel') {
+    padding: 60px 10px 30px;
+  }
+  p {
+    margin-bottom: 30px;
+    line-height: 26px;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
     color: $color-1;
-  }
-  @include bp(tab) {
-    max-width: 100%;
-    &-images {
-      img {
-        width: 70px;
-      }
+    @include bp('cel') {
+      font-size: 21px;
     }
   }
-  @include bp(cel) {
-    &-images,
-    &-title-first {
-      display: none;
-    }
-    &-title-last {
-      text-align: center;
-    }
+}
+
+#proteja-se {
+  background: url('./assets/img/pontos.png') center;
+  background-size: contain;
+  width: 100%;
+  p {
+    display: block;
+    background-color: $color-1;
+    color: white;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    @include type-1(700, 60);
   }
-  &-images {
-    position: absolute;
-    left: 20%;
+}
+
+#epis {
+  padding: 30px 0;
+  &-title {
+    text-align: center;
+    margin-bottom: 60px;
   }
-  &-title-first {
-    text-align: right;
-  }
-  &-title-last,
-  &-title-first {
-    color: $text-decoration;
-    @include typePrimary(700);
-    span {
-      font-size: 40px;
-      strong {
-        color: $color-3;
+  &-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    &-item {
+      min-height: 240px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+
+      p {
+        text-align: center;
+        line-height: 17px;
       }
     }
   }
 }
 
-// graphic bars
-.graphic-bars {
-  &-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+#recomendacoes {
+  background-color: #f7f7f7;
+  padding: 60px 0;
+  @include bp('cel') {
     padding: 20px 0;
-    position: relative;
-    span {
-      width: 10%;
-      color: $color-3;
-      font-weight: 700;
-      @include bp(cel) {
-        width: 100%;
-        position: absolute;
-        top: 0;
+  }
+  &-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    h2 {
+      font-size: 40px;
+      color: $color-2;
+      margin-bottom: 60px;
+      @include bp('cel') {
+        font-size: 22px;
       }
+      strong {
+        color: $color-1;
+      }
+    }
+  }
+  #video-modal-thumb {
+    padding: 20px 0;
+    img {
+      transition: all 0.35s ease;
+      &:hover {
+        -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.23);
+      }
+    }
+    @include bp('cel') {
+      padding: 10px 0;
     }
     p {
-      @include typePrimary(700);
-      color: $color-3;
-      margin-right: 30px;
-      @include bp(cel) {
-        font-size: 70%;
+      margin: 20px 0;
+    }
+  }
+}
+
+#faq {
+  padding: 60px 0;
+  @include bp('cel') {
+    padding: 20px 0;
+  }
+  #accordion {
+    margin-bottom: 60px;
+    max-width: 940px;
+    min-width: 940px;
+    width: 100%;
+    @include bp('tab') {
+      min-width: 100%;
+    }
+    @include bp('cel') {
+      padding: 0 10px;
+    }
+  }
+  &-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+
+    h2 {
+      font-size: 40px;
+      color: $color-2;
+      margin-bottom: 60px;
+      @include bp('cel') {
+        font-size: 22px;
       }
     }
-    &-bar {
-      background: $color-3;
-      max-width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      position: relative;
-      align-items: center;
-      height: 20px;
-      transition: all 0.7s ease-in-out;
-      width: 0;
-      @include radius();
-      img {
-        position: absolute;
-        right: -1%;
+  }
+  .btn-link {
+    color: $color-2;
+    width: 100%;
+    text-align: left;
+    @include bp('cel') {
+      font-size: 12px;
+    }
+    &:after {
+      content: '+';
+      font-size: 25px;
+      line-height: 1;
+      width: 31px;
+      height: 31px;
+      color: $color-1;
+      border: 2px solid $color-1;
+      border-radius: 50%;
+      position: absolute;
+      right: 16px;
+      top: -2px;
+      margin: 10px;
+      text-align: center;
+      @include bp('cel') {
+        font-size: 21px;
+        line-height: 1;
+        width: 25px;
+        height: 25px;
+        top: -4px;
       }
+    }
+    &:not(.collapsed) {
+      &:after {
+        content: '-';
+      }
+    }
+  }
+
+  .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid $color-1;
+    border-top: 1px solid $color-1;
+    border-radius: 0;
+    &:first-child {
+      border-top: 2px solid $color-1;
+    }
+    &-header {
+      padding: 0;
+      background-color: white;
+      border-bottom: 0px;
+    }
+    &-body {
+      border-top: 2px solid #717171;
+      max-width: 95%;
+      line-height: 28px;
+      font-size: 16px;
+      margin: 0 auto;
       p {
-        margin-right: 60px;
-        color: #fff;
-        opacity: 0;
-      }
-      &.anime-start {
-        p {
-          opacity: 1;
-        }
-        &[data-width='40'] {
-          width: 40%;
-        }
-        &[data-width='60'] {
-          width: 60%;
-        }
-        &[data-width='70'] {
-          width: 80%;
-        }
-        &[data-width='100'] {
-          width: 90%;
-          @include bp(cel) {
-            width: 100%;
-          }
+        &:first-child {
+          margin-bottom: 20px;
         }
       }
     }

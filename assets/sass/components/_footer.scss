@@ -1,0 +1,47 @@
+#footer {
+  background-color: #f7f7f7;
+  padding: 60px 0;
+  @include bp('tab') {
+    &-row {
+      flex-direction: column;
+    }
+  }
+  &-selo-e-texto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include bp('cel') {
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 250px;
+      @include bp('cel') {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      @include bp('tab') {
+        margin-bottom: 20px;
+        width: 50%;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      color: $color-1;
+      font-weight: 700;
+    }
+  }
+  &-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include bp('cel') {
+      flex-direction: column;
+    }
+    img {
+      padding: 10px;
+    }
+  }
+}

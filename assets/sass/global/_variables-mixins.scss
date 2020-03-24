@@ -1,28 +1,18 @@
 //  colors
-$color-1: #122512;
-$color-2: #c4f043;
-$color-3: #825b8c;
-$color-4: #f5f8dd;
-$color-5: #fdffd3;
-$text-decoration: #0096ac;
+$color-1: #b73333;
+$color-2: #28445c;
+$color-3: #d46b25;
 
 //  typos
-@mixin typePrimary($weight: 400, $size: 20) {
-  font-family: 'Roboto Condensed', sans-serif;
+@mixin type-1($weight: 400, $size: 18) {
+  font-family: 'Roboto', sans-serif;
   font-weight: $weight;
-  @if $size == 20 {
+  @if $size == 18 {
     font-size: 1.15em;
   }
   @if $size == 60 {
-    font-size: 3.35em;
+    font-size: 2.35em;
   }
-}
-
-// radius
-@mixin radius($radius: 10px) {
-  border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
 }
 
 // breakpoints

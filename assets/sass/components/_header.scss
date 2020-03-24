@@ -1,0 +1,79 @@
+#header {
+  background: url('./assets/img/background.png') center center no-repeat;
+  background-size: cover;
+  @include bp('cel') {
+    padding: 20px 0;
+  }
+  &-face {
+    @include bp('tab') {
+      display: none;
+    }
+  }
+  &-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    h1 {
+      font-size: 60px;
+      color: $color-2;
+      margin-bottom: 20px;
+      strong {
+        color: $color-1;
+      }
+      @include bp('tab') {
+        font-size: 30px;
+      }
+    }
+    p {
+      color: $color-1;
+      position: relative;
+      margin: 0 0 30px 20px;
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 30px;
+        position: absolute;
+        background-color: $color-1;
+        left: -15px;
+      }
+    }
+  }
+  &-logos {
+    display: flex;
+    align-items: center;
+    @include bp('cel') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    img {
+      margin: 0px 20px 0 0;
+      @include bp(cel) {
+        margin: 20px 20px 0 0;
+      }
+    }
+  }
+  &-hash {
+    min-height: 360px;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include bp('tab') {
+      min-height: 280px;
+    }
+    @include bp('cel') {
+      display: none;
+    }
+    img {
+      max-width: 300px;
+      max-height: 300px;
+    }
+    @include bp('tab') {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}
