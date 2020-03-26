@@ -105,7 +105,38 @@
       }
     }
   }
-  #video-modal-thumb {
+  .video-modal-thumb {
+    a {
+      display: block;
+      position: relative;
+      &:before {
+        content: '';
+        background: url(./assets/img/icons/youtube.png) center no-repeat;
+        background-size: 80px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background-color: transparentize(white, 0.2);
+        transition: all 0.45s ease;
+      }
+      &.disabled {
+        color: currentColor;
+        cursor: not-allowed;
+        opacity: 0.5;
+        text-decoration: none;
+        pointer-events: none;
+      }
+    }
+    a:hover {
+      &:before {
+        opacity: 0;
+      }
+    }
     padding: 20px 0;
     img {
       transition: all 0.35s ease;
